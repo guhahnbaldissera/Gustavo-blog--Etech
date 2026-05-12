@@ -1,26 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/sections/Nav";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Timeline } from "@/components/sections/Timeline";
+import { Awards } from "@/components/sections/Awards";
+import { Sports } from "@/components/sections/Sports";
+import { Tech } from "@/components/sections/Tech";
+import { Hobbies } from "@/components/sections/Hobbies";
+import { Footer } from "@/components/sections/Footer";
+import { BackgroundFx } from "@/components/sections/BackgroundFx";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Gustavo Luiz Hahn Baldissera — Portfólio Pessoal" },
+      {
+        name: "description",
+        content:
+          "Portfólio de Gustavo Luiz Hahn Baldissera — estudante de Ciência e Tecnologia na UFSC Joinville. Conquistas, trajetória, esportes e tecnologia.",
+      },
+      { property: "og:title", content: "Gustavo Luiz Hahn Baldissera — Portfólio" },
+      {
+        property: "og:description",
+        content:
+          "Acadêmico de Ciência e Tecnologia na UFSC Joinville. Medalhista da OBA, campeão JESC e apaixonado por tecnologia.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen bg-background text-foreground grain">
+      <BackgroundFx />
+      <div className="relative z-10">
+        <Nav />
+        <main>
+          <Hero />
+          <About />
+          <Timeline />
+          <Awards />
+          <Sports />
+          <Tech />
+          <Hobbies />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
