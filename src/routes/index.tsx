@@ -5,7 +5,7 @@ import { About } from "@/components/sections/About";
 import { Timeline } from "@/components/sections/Timeline";
 import { Awards } from "@/components/sections/Awards";
 import { Sports } from "@/components/sections/Sports";
-import { Tech } from "@/components/sections/Tech";
+
 import { Hobbies } from "@/components/sections/Hobbies";
 import { Footer } from "@/components/sections/Footer";
 import { BackgroundFx } from "@/components/sections/BackgroundFx";
