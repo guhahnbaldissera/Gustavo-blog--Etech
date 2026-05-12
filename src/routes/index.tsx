@@ -42,7 +42,7 @@ function Index() {
           <Timeline />
           <Awards />
           <Sports />
-          <Tech />
+          
           <Hobbies />
         </main>
         <Footer />
