@@ -5,34 +5,29 @@ const ease = [0.32, 0.72, 0, 1] as const;
 
 const events = [
   {
-    year: "Início",
+    year: "17 / 04 / 2007",
+    title: "Nascimento",
+    desc: "O ponto de partida — Joinville, Santa Catarina.",
+  },
+  {
+    year: "2008 — 2025",
     title: "Colégio dos Santos Anjos",
-    desc: "Toda a formação básica e fundamental — base de disciplina, leitura e curiosidade científica.",
+    desc: "Toda a formação básica e fundamental. Base de disciplina, leitura e curiosidade científica que moldaram o resto da trajetória.",
   },
   {
-    year: "2024",
-    title: "Medalha de Prata — OBA",
-    desc: "2º lugar na Olimpíada Brasileira de Astronomia e Astronáutica.",
+    year: "Nov 2025 — Mar 2026",
+    title: "Engenharia de Moldes",
+    desc: "Primeira experiência profissional em uma empresa de engenharia de moldes — contato real com indústria, prazos e processos técnicos.",
   },
   {
-    year: "2024",
-    title: "Campeão JESC — Basquete",
-    desc: "Título nas fases microrregional e regional dos Jogos Escolares.",
+    year: "Mar 2026 — Hoje",
+    title: "UFSC Joinville · C&T",
+    desc: "Bacharelado em Ciência e Tecnologia. Construindo a próxima fronteira entre engenharia, software e ambição.",
   },
   {
-    year: "2025",
-    title: "Medalha de Ouro — OBA",
-    desc: "1º lugar na Olimpíada Brasileira de Astronomia 2025.",
-  },
-  {
-    year: "2025",
-    title: "Prêmio Jovem Autor Joinville",
-    desc: "3º lugar — reconhecimento pela escrita e criatividade literária.",
-  },
-  {
-    year: "Hoje",
-    title: "UFSC Joinville",
-    desc: "Bacharelado em Ciência e Tecnologia. Construindo a próxima fronteira.",
+    year: "Em andamento",
+    title: "Processo de Trainees · ETECH Jr.",
+    desc: "Em processo seletivo da ETECH Jr. — reconhecida como a melhor empresa júnior da UFSC e do Brasil.",
   },
 ];
 
