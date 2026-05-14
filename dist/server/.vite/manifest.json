@@ -1,0 +1,105 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "C:/Users/gusta/OneDrive/Desktop/Faculdade.Etech/Blog.gustavo/Gustavo-blog--Etech/src/styles.css": {
+    "file": "assets/styles-7RTjXDRH.css",
+    "src": "C:/Users/gusta/OneDrive/Desktop/Faculdade.Etech/Blog.gustavo/Gustavo-blog--Etech/src/styles.css"
+  },
+  "_server-B-u600xl.js": {
+    "file": "assets/server-B-u600xl.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "src/router.tsx",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_worker-entry-BxZEtUq0.js": {
+    "file": "assets/worker-entry-BxZEtUq0.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-B-u600xl.js"
+    ]
+  },
+  "src/assets/fifa18.jpg": {
+    "file": "assets/fifa18-BBUKP3xf.jpg",
+    "src": "src/assets/fifa18.jpg"
+  },
+  "src/assets/inception.jpg": {
+    "file": "assets/inception-qPg0cAWi.jpg",
+    "src": "src/assets/inception.jpg"
+  },
+  "src/assets/interestelar.jpg": {
+    "file": "assets/interestelar-DW5THbh2.jpg",
+    "src": "src/assets/interestelar.jpg"
+  },
+  "src/assets/nba2k24.jpg": {
+    "file": "assets/nba2k24-B0RthQzd.jpg",
+    "src": "src/assets/nba2k24.jpg"
+  },
+  "src/assets/rdr2.jpg": {
+    "file": "assets/rdr2-DbagJuuF.jpg",
+    "src": "src/assets/rdr2.jpg"
+  },
+  "src/router.tsx": {
+    "file": "assets/router-DCVM0TmT.js",
+    "name": "router",
+    "src": "src/router.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-B-u600xl.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-7RTjXDRH.css"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-Cr7YMc5Y.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-B-u600xl.js"
+    ],
+    "assets": [
+      "assets/interestelar-DW5THbh2.jpg",
+      "assets/inception-qPg0cAWi.jpg",
+      "assets/fifa18-BBUKP3xf.jpg",
+      "assets/rdr2-DbagJuuF.jpg",
+      "assets/nba2k24-B0RthQzd.jpg"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-GiqTpzvW.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-BxZEtUq0.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-5gwY-ZQH.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-BxZEtUq0.js"
+    ]
+  }
+}
