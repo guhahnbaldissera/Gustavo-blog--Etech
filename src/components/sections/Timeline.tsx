@@ -27,7 +27,7 @@ const events = [
   {
     year: "Em andamento",
     title: "Processo de Trainees · ETECH Jr.",
-    desc: "Em processo seletivo da ETECH Jr. — reconhecida como a melhor empresa júnior da UFSC e do Brasil.",
+    desc: "Em processo seletivo da ETECH Jr. — A melhor empresa júnior da UFSC e do Brasil.",
   },
 ];
 
