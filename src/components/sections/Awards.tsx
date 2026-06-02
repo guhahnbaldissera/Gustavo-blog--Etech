@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
+import redacaoAsset from "@/assets/redacao-jovem-autor.jpg.asset.json";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
-const awards = [
+const awards: Array<{
+  year: string;
+  rank: string;
+  title: string;
+  desc: string;
+  image?: string;
+  imageAlt?: string;
+}> = [
   {
     year: "2025",
     rank: "1º",
@@ -21,6 +29,8 @@ const awards = [
     rank: "3º",
     title: "Prêmio Jovem Autor Joinville",
     desc: "Reconhecimento literário pela escrita criativa e originalidade.",
+    image: redacaoAsset.url,
+    imageAlt: "Redação manuscrita — Prêmio Jovem Autor 2025",
   },
   {
     year: "JESC",
@@ -58,6 +68,20 @@ export function Awards() {
             </div>
             <h4 className="text-lg font-bold tracking-tight mb-2 leading-snug">{a.title}</h4>
             <p className="text-sm text-muted-foreground text-pretty">{a.desc}</p>
+            {a.image && (
+              <div className="relative mt-5 overflow-hidden rounded-xl border border-border bg-secondary/40">
+                <img
+                  src={a.image}
+                  alt={a.imageAlt ?? a.title}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-2 font-mono text-[9px] uppercase tracking-[0.25em] text-foreground/80 bg-background/60 backdrop-blur px-2 py-1 rounded-full">
+                  Redação · 2025
+                </span>
+              </div>
+            )}
           </motion.article>
         ))}
       </div>
