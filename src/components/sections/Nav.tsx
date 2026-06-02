@@ -30,7 +30,7 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#hero" className="font-mono text-xs tracking-widest text-accent uppercase">
-          G. Baldissera — 2025
+          G. Baldissera — 2026
         </a>
 
         <div className="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-medium text-muted-foreground">
