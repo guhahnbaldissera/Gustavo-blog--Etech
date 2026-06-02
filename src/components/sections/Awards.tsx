@@ -4,7 +4,14 @@ import redacaoAsset from "@/assets/redacao-jovem-autor.jpg.asset.json";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
-const awards = [
+const awards: Array<{
+  year: string;
+  rank: string;
+  title: string;
+  desc: string;
+  image?: string;
+  imageAlt?: string;
+}> = [
   {
     year: "2025",
     rank: "1º",
@@ -25,23 +32,13 @@ const awards = [
     image: redacaoAsset.url,
     imageAlt: "Redação manuscrita — Prêmio Jovem Autor 2025",
   },
-] as Array<{
-  year: string;
-  rank: string;
-  title: string;
-  desc: string;
-  image?: string;
-  imageAlt?: string;
-}>;
-
-awards.push(
   {
     year: "JESC",
     rank: "🏆",
     title: "Campeão de Basquete — Microrregional & Regional",
     desc: "Título nos Jogos Escolares de Santa Catarina representando o colégio.",
   },
-);
+];
 
 export function Awards() {
   return (
