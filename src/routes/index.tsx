@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { Timeline } from "@/components/sections/Timeline";
 import { Awards } from "@/components/sections/Awards";
 import { Sports } from "@/components/sections/Sports";
+import { News } from "@/components/sections/News";
 
 import { Hobbies } from "@/components/sections/Hobbies";
 import { Footer } from "@/components/sections/Footer";
@@ -44,6 +45,7 @@ function Index() {
           <Sports />
           
           <Hobbies />
+          <News />
         </main>
         <Footer />
       </div>
