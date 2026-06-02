@@ -44,10 +44,10 @@ export function Hero() {
             transition={{ duration: 0.9, ease, delay: 0.35 }}
             className="text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed mb-8"
           >
-            Acadêmico de Ciência e Tecnologia na{" "}
-            <span className="text-foreground font-semibold">UFSC Joinville</span>.
-            Explorando a intersecção entre engenharia rigorosa, design cinematográfico
-            e ambição tecnológica.
+            Estudante de Ciência e Tecnologia na{" "}
+            <span className="text-foreground font-semibold">UFSC Joinville</span>,
+            com interesse em engenharia, tecnologia, design e desenvolvimento de projetos
+            que unem criatividade e raciocínio lógico.
           </motion.p>
 
           <motion.div

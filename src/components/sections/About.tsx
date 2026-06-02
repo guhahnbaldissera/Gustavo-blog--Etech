@@ -13,7 +13,7 @@ const facts = [
 export function About() {
   return (
     <section id="sobre" className="py-32 px-6 max-w-7xl mx-auto">
-      <SectionHeader eyebrow="Sobre Mim" title="Curiosidade analítica como pilar de tudo que construo." />
+      <SectionHeader eyebrow="Sobre Mim" title="Minha trajetória e interesses." />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <motion.div
@@ -24,15 +24,15 @@ export function About() {
           className="lg:col-span-7 glass-card glass-card-hover rounded-3xl p-8 sm:p-10"
         >
           <p className="text-lg text-foreground/90 leading-relaxed text-pretty mb-6">
-            Estudei toda minha vida no <span className="text-foreground font-semibold">Colégio dos Santos Anjos</span>,
-            uma base sólida que moldou minha disciplina e curiosidade. Hoje, curso{" "}
+            Estudei no <span className="text-foreground font-semibold">Colégio dos Santos Anjos</span>
+            durante toda a minha trajetória escolar. Atualmente curso{" "}
             <span className="text-foreground font-semibold">Bacharelado em Ciência e Tecnologia</span> na
-            UFSC Joinville, onde transformo abstrações em sistemas — e perguntas em respostas.
+            UFSC Joinville, onde desenvolvo conhecimentos em matemática, programação, engenharia e resolução de problemas.
           </p>
           <p className="text-muted-foreground leading-relaxed text-pretty">
-            Vejo tecnologia como linguagem: ela conecta lógica, criatividade e impacto.
-            Estudo com a mesma intensidade com que treino — buscando a próxima fronteira,
-            seja em código, ciência, esporte ou pensamento crítico.
+            Tenho grande interesse por tecnologia e engenharia, áreas que me motivam a aprender
+            constantemente e buscar soluções para diferentes desafios. Também valorizo o esporte
+            e a disciplina, que considero importantes para o desenvolvimento pessoal e profissional.
           </p>
         </motion.div>
 

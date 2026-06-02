@@ -10,7 +10,7 @@ export function Sports() {
     <section id="esportes" className="py-32 px-6 max-w-7xl mx-auto">
       <SectionHeader
         eyebrow="Esportes"
-        title="Onde corpo e estratégia se encontram."
+        title="Esporte e desenvolvimento pessoal."
       >
         Basquete e futebol moldam minha mentalidade competitiva — disciplina coletiva,
         leitura de jogo e resiliência aplicadas dentro e fora da quadra.
@@ -38,8 +38,7 @@ export function Sports() {
               <h4 className="text-4xl sm:text-5xl font-black tracking-tighter mt-4">Basquete</h4>
             </div>
             <p className="text-muted-foreground max-w-md text-pretty">
-              Campeão JESC nas fases microrregional e regional. O esporte que mais
-              exige inteligência tática e leitura instantânea — exatamente como engenharia.
+              Campeão dos Jogos Escolares de Santa Catarina (JESC) nas etapas microrregional e regional de xadrez. A modalidade contribuiu para o desenvolvimento do raciocínio estratégico, concentração e tomada de decisões.
             </p>
           </div>
         </motion.div>
@@ -65,7 +64,7 @@ export function Sports() {
               <h4 className="text-3xl font-black tracking-tighter mt-4">Futebol</h4>
             </div>
             <p className="text-muted-foreground text-pretty text-sm">
-              O esporte do país — estratégia coletiva, ritmo e rivalidade saudável.
+              Futebol é um dos esportes que mais acompanho e pratico. Gosto do trabalho em equipe, da competitividade e da dinâmica que o esporte proporciona.
             </p>
           </div>
         </motion.div>
