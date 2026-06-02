@@ -38,7 +38,7 @@ export function Sports() {
               <h4 className="text-4xl sm:text-5xl font-black tracking-tighter mt-4">Basquete</h4>
             </div>
             <p className="text-muted-foreground max-w-md text-pretty">
-              Campeão dos Jogos Escolares de Santa Catarina (JESC) nas etapas microrregional e regional de xadrez. A modalidade contribuiu para o desenvolvimento do raciocínio estratégico, concentração e tomada de decisões.
+              A modalidade contribuiu muito para eu desenvolver raciocínio estratégico, concentração e tomada de decisões.
             </p>
           </div>
         </motion.div>
