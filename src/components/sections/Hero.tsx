@@ -24,7 +24,7 @@ export function Hero() {
         >
           <span className="size-1.5 rounded-full bg-accent animate-pulse-soft" />
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Portfólio Pessoal · 2025
+            Portfólio Pessoal · 2026
           </span>
         </motion.div>
 
