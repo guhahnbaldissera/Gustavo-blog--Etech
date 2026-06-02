@@ -5,12 +5,12 @@
     "src": "%23tanstack-start-plugin-adapters",
     "isDynamicEntry": true
   },
-  "C:/Users/gusta/OneDrive/Desktop/Faculdade.Etech/Blog.gustavo/Gustavo-blog--Etech/src/styles.css": {
+  "/dev-server/src/styles.css": {
     "file": "assets/styles-7RTjXDRH.css",
-    "src": "C:/Users/gusta/OneDrive/Desktop/Faculdade.Etech/Blog.gustavo/Gustavo-blog--Etech/src/styles.css"
+    "src": "/dev-server/src/styles.css"
   },
-  "_server-B-u600xl.js": {
-    "file": "assets/server-B-u600xl.js",
+  "_server-B7uMhKJG.js": {
+    "file": "assets/server-B7uMhKJG.js",
     "name": "server",
     "isDynamicEntry": true,
     "dynamicImports": [
@@ -20,11 +20,11 @@
       "%23tanstack-start-plugin-adapters"
     ]
   },
-  "_worker-entry-BxZEtUq0.js": {
-    "file": "assets/worker-entry-BxZEtUq0.js",
+  "_worker-entry-Bc4Cxg8e.js": {
+    "file": "assets/worker-entry-Bc4Cxg8e.js",
     "name": "worker-entry",
     "dynamicImports": [
-      "_server-B-u600xl.js"
+      "_server-B7uMhKJG.js"
     ]
   },
   "src/assets/fifa18.jpg": {
@@ -48,12 +48,12 @@
     "src": "src/assets/rdr2.jpg"
   },
   "src/router.tsx": {
-    "file": "assets/router-DCVM0TmT.js",
+    "file": "assets/router-CCQ0xjt_.js",
     "name": "router",
     "src": "src/router.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_server-B-u600xl.js"
+      "_server-B7uMhKJG.js"
     ],
     "dynamicImports": [
       "src/routes/index.tsx?tsr-split=component"
@@ -63,12 +63,12 @@
     ]
   },
   "src/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-Cr7YMc5Y.js",
+    "file": "assets/index-CIh4LaMN.js",
     "name": "index",
     "src": "src/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-B-u600xl.js"
+      "_server-B7uMhKJG.js"
     ],
     "assets": [
       "assets/interestelar-DW5THbh2.jpg",
@@ -79,16 +79,16 @@
     ]
   },
   "src/start.ts": {
-    "file": "assets/start-GiqTpzvW.js",
+    "file": "assets/start-DHEuDKo_.js",
     "name": "start",
     "src": "src/start.ts",
     "isDynamicEntry": true,
     "imports": [
-      "_worker-entry-BxZEtUq0.js"
+      "_worker-entry-Bc4Cxg8e.js"
     ]
   },
   "tanstack-start-manifest:v": {
-    "file": "assets/_tanstack-start-manifest_v-5gwY-ZQH.js",
+    "file": "assets/_tanstack-start-manifest_v-BL7vgN6g.js",
     "name": "_tanstack-start-manifest_v",
     "src": "tanstack-start-manifest:v",
     "isDynamicEntry": true
@@ -99,7 +99,7 @@
     "src": "virtual:cloudflare/worker-entry",
     "isEntry": true,
     "imports": [
-      "_worker-entry-BxZEtUq0.js"
+      "_worker-entry-Bc4Cxg8e.js"
     ]
   }
 }
