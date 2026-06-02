@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
 import interestelar from "@/assets/interestelar.jpg";
-import inception from "@/assets/inception.jpg";
-import fifa from "@/assets/fifa18.jpg";
+import inceptionAsset from "@/assets/inception-new.jpg.asset.json";
+import fifaAsset from "@/assets/fifa-new.jpg.asset.json";
 import rdr2 from "@/assets/rdr2.jpg";
-import nba from "@/assets/nba2k24.jpg";
+import nbaAsset from "@/assets/nba-new.jpg.asset.json";
+
+const inception = inceptionAsset.url;
+const fifa = fifaAsset.url;
+const nba = nbaAsset.url;
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
