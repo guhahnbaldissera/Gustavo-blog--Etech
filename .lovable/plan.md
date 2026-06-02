@@ -1,36 +1,43 @@
-Duas mudanças:
+Vou ajustar o fluxo de deploy para evitar que o Wrangler tente empacotar diretamente o arquivo-fonte do TanStack Start.
 
-**1. Correção de texto em `src/components/sections/Sports.tsx`**
+Plano:
 
-Trocar o parágrafo do card "Basquete" de:
+1. Conferir a configuração existente
+- Manter `vite.config.ts` usando `@lovable.dev/vite-tanstack-config` com `tanstackStart.server.entry = "server"`, pois isso já conecta o wrapper SSR correto ao build.
+- Manter o projeto como SSR em Cloudflare Workers com assets, não como um deploy estático puro de Pages.
 
-> Campeão dos Jogos Escolares de Santa Catarina (JESC) nas etapas microrregional e regional de xadrez. A modalidade contribuiu para o desenvolvimento do raciocínio estratégico, concentração e tomada de decisões.
+2. Corrigir o ponto de deploy do Wrangler
+- Ajustar/remover a armadilha em `wrangler.jsonc` onde `main` aponta para `src/server.ts`.
+- O problema acontece porque `npx wrangler deploy` na raiz tenta resolver imports virtuais internos do TanStack Start fora do pipeline Vite.
+- A correção será fazer o deploy usar o worker gerado por `vite build`, em `dist/server/index.mjs`, junto com o `dist/server/wrangler.json` gerado automaticamente.
 
-para:
-
-> A modalidade contribuiu muito para eu desenvolver raciocínio estratégico, concentração e tomada de decisões.
-
-**2. Ajuste de configuração para o deploy no Cloudflare**
-
-O erro do `npx wrangler deploy` acontece porque hoje o `wrangler.jsonc` aponta `main` para `src/server.ts`, que contém imports virtuais do TanStack Start (`#tanstack-router-entry`, `#tanstack-start-entry`, etc.) que só existem dentro do pipeline do Vite. O Wrangler sozinho não resolve esses módulos.
-
-O build do Vite já gera um worker pronto em `dist/server/` com seu próprio `wrangler.json` correto (`main: index.mjs`, assets em `../client`, `no_bundle: true`). Esse é o artefato que deve ser publicado.
-
-Ajustes propostos:
-
-- Adicionar um script em `package.json`:
+3. Ajustar scripts de deploy
+- Garantir que `package.json` tenha um comando de deploy compatível, como:
 
 ```json
 "deploy": "vite build && wrangler deploy --config dist/server/wrangler.json --cwd dist/server"
 ```
 
-- Não alterar `vite.config.ts` nem `src/server.ts` (estão corretos).
-- Manter `wrangler.jsonc` da raiz apenas como referência para `wrangler dev`; o deploy real passa a usar o config gerado em `dist/server/wrangler.json`.
+- Se necessário, adicionar um script auxiliar explícito para Cloudflare, por exemplo:
 
-Depois disso, o fluxo correto para publicar manualmente no Cloudflare passa a ser:
-
-```bash
-bun run deploy
+```json
+"deploy:cloudflare": "vite build && wrangler deploy --config dist/server/wrangler.json --cwd dist/server"
 ```
 
-Observação: o caminho mais simples e recomendado segue sendo o botão **Publish** do Lovable, que já executa esse pipeline automaticamente. O ajuste acima só é necessário se você quiser fazer self-host manual no Cloudflare.
+4. Evitar aliases manuais incorretos
+- Não vou criar aliases manuais para `#tanstack-router-entry`, `#tanstack-start-entry`, `tanstack-start-manifest:v` ou `tanstack-start-injected-head-scripts:v`.
+- Esses módulos são virtuais e devem ser resolvidos pelo build do TanStack/Vite, não pelo Wrangler diretamente.
+- A correção correta é mudar o comando/configuração de deploy, não “inventar” aliases para eles.
+
+5. Validação
+- Verificar que o build gera `dist/server/wrangler.json` apontando para `index.mjs`.
+- Confirmar que o script final chama Wrangler com esse arquivo gerado.
+
+Observação importante:
+- Eu não consigo gerar commit diretamente daqui porque o ambiente bloqueia comandos Git stateful como `git add` e `git commit`.
+- Posso deixar os arquivos corrigidos; depois você roda o commit localmente com a mensagem sugerida:
+
+```bash
+git add package.json wrangler.jsonc vite.config.ts
+git commit -m "Fix Cloudflare deploy for TanStack Start SSR"
+```
