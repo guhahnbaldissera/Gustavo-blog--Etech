@@ -36,7 +36,7 @@ export function Awards() {
       <SectionHeader
         eyebrow="Conquistas & Premiações"
         title="Resultados que reforçam disciplina, foco e versatilidade."
-        count={`(${String(awards.length).padStart(2, "0")}_TOTAL)`}
+        count={`${String(awards.length).padStart(2, "0")} TOTAL`}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

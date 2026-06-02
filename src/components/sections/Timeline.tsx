@@ -37,7 +37,7 @@ export function Timeline() {
       <SectionHeader
         eyebrow="Trajetória"
         title="Uma linha do tempo construída por estudo, esporte e ciência."
-        count={`(${String(events.length).padStart(2, "0")}_MARCOS)`}
+        count={`${String(events.length).padStart(2, "0")} MARCOS`}
       />
 
       <div className="relative">

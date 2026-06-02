@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
 import interestelar from "@/assets/interestelar.jpg";
-import inceptionAsset from "@/assets/inception-new.jpg.asset.json";
-import fifaAsset from "@/assets/fifa-new.jpg.asset.json";
+import inception from "@/assets/inception.jpg";
+import fifa from "@/assets/fifa18.jpg";
 import rdr2 from "@/assets/rdr2.jpg";
-import nbaAsset from "@/assets/nba-new.jpg.asset.json";
-
-const inception = inceptionAsset.url;
-const fifa = fifaAsset.url;
-const nba = nbaAsset.url;
+import nba from "@/assets/nba2k24.jpg";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
@@ -88,7 +84,7 @@ export function Hobbies() {
       {/* Cinema */}
       <div className="mb-6 flex items-baseline justify-between">
         <span className="eyebrow">Cinema</span>
-        <span className="font-mono text-[10px] text-muted-foreground">(02_FILMES)</span>
+        <span className="font-mono text-[10px] text-muted-foreground">02 FILMES</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-16">
         <MediaCard
@@ -108,7 +104,7 @@ export function Hobbies() {
       {/* Gaming */}
       <div className="mb-6 flex items-baseline justify-between">
         <span className="eyebrow">Gaming</span>
-        <span className="font-mono text-[10px] text-muted-foreground">(03_TÍTULOS)</span>
+        <span className="font-mono text-[10px] text-muted-foreground">03 TÍTULOS</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
         {games.map((g, i) => (

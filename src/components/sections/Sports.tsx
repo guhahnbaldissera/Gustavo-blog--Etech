@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
-import campNouAsset from "@/assets/camp-nou.jpg.asset.json";
-import chaseCenterAsset from "@/assets/chase-center.jpg.asset.json";
+import campNou from "@/assets/camp-nou.png";
+import chaseCenter from "@/assets/chase-center.png";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
@@ -25,7 +25,7 @@ export function Sports() {
           className="lg:col-span-2 group relative overflow-hidden rounded-3xl border border-border bg-secondary/30 min-h-[320px]"
         >
           <img
-            src={chaseCenterAsset.url}
+            src={chaseCenter}
             alt="Chase Center — arena de basquete"
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
@@ -51,7 +51,7 @@ export function Sports() {
           className="group relative overflow-hidden rounded-3xl border border-border bg-secondary/30 min-h-[320px]"
         >
           <img
-            src={campNouAsset.url}
+            src={campNou}
             alt="Camp Nou — estádio do FC Barcelona"
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
