@@ -6,7 +6,6 @@ const links = [
   { href: "#trajetoria", label: "Trajetória" },
   { href: "#conquistas", label: "Conquistas" },
   { href: "#hobbies", label: "Hobbies" },
-  { href: "#noticias", label: "Notícias" },
 ];
 
 export function Nav() {
