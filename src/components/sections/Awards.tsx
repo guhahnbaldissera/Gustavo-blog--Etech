@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
-import redacaoAsset from "@/assets/redacao-jovem-autor.jpg.asset.json";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
@@ -29,8 +28,6 @@ const awards: Array<{
     rank: "3º",
     title: "Prêmio Jovem Autor Joinville",
     desc: "Reconhecimento literário pela escrita criativa e originalidade.",
-    image: redacaoAsset.url,
-    imageAlt: "Redação manuscrita — Prêmio Jovem Autor 2025",
   },
   {
     year: "JESC",
